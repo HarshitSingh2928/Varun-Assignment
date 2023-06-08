@@ -1,0 +1,9 @@
+.feed{
+    width:  100%;
+    .postBox{
+        position: sticky;
+        display: flex;
+        flex-direction: column;
+       align-items: center;
+    }
+}

@@ -1,0 +1,27 @@
+.sidebarContainer {
+  border-right: 1px solid rgb(38, 38, 38);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sidebarContainer > button {
+  margin: 2rem 4rem 2rem 4rem;
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.sidebarContainer > button.selected {
+  color: green;
+}
+.sidebarContainer :link > button {
+  margin: 2rem 4rem 2rem 4rem;
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.sidebarContainer :link > button.selected {
+  color: green;
+}/*# sourceMappingURL=Sidebar.css.map */

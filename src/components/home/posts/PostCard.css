@@ -1,0 +1,36 @@
+.postcard {
+  padding-left: 12rem;
+}
+.postcard .card {
+  padding: 1rem;
+  width: 60rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  margin: 1rem 8rem 1rem 4rem;
+}
+.postcard .card div p {
+  padding: 0.5rem;
+  color: gray;
+}
+.postcard .card button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0.8rem;
+  border: none;
+  background-color: rgba(0, 128, 81, 0.7294117647);
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+.postcard .card h4 {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  margin: 2px;
+}/*# sourceMappingURL=PostCard.css.map */

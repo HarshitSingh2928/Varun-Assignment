@@ -1,0 +1,23 @@
+.weekly {
+  background-color: rgba(0, 128, 81, 0.7294117647);
+  padding: 1rem;
+  height: 80vh;
+}
+.weekly > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+.weekly > div > div {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  color: white;
+}
+.weekly > div > div p {
+  padding-left: 4px;
+  padding-right: 4px;
+}/*# sourceMappingURL=Weekly.css.map */

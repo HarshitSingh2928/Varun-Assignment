@@ -1,0 +1,48 @@
+$postcard-padding: 12rem;
+$card-width: 60rem;
+@import '../../../variables';
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.postcard {
+  padding-left: $postcard-padding;
+
+  .card {
+    padding: 1rem;
+    width: $card-width;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    margin: 1rem 8rem 1rem 4rem;
+
+    div {
+      p {
+        padding: 0.5rem;
+        color: gray;
+      }
+    }
+
+    button {
+      @include flex-center;
+      width: 5rem;
+      height: fit-content;
+      padding: 0.8rem;
+      border: none;
+      background-color: $color-green;
+      color: $color-white;
+      font-weight: bold;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    h4 {
+      padding: 0.5rem;
+      font-size: 1.2rem;
+      margin: 2px;
+    }
+  }
+}

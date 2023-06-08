@@ -1,0 +1,30 @@
+@import '../../variables';
+.textbox{
+    display: flex;
+    justify-content: center;
+    &>form{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+       
+        &>button{
+            display: flex;
+            width: 5rem;
+           padding: .5rem;
+           margin-top: .5rem;
+        justify-content: center;
+        border: none;
+        background-color: $color-green;
+        color: $color-white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+        }
+        &>input{
+           border-radius: 5px;
+           border: 1px solid #ccc; 
+            font-size: .8rem;
+            height:2.5rem; 
+            width: 60rem; 
+        }
+    }
+  
+}
