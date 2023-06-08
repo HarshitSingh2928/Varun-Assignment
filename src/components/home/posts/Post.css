@@ -13,12 +13,15 @@
   flex-direction: column;
   align-items: center;
 }
-.header > h2 {
+.header > p {
   display: flex;
+  font-size: large;
+  font-weight: bold;
+  margin: 0;
 }
 
 .filtered-day {
-  padding: 1rem;
+  padding: 0.5rem;
   margin-left: 1rem;
   background-color: black;
   border-radius: 2rem;

@@ -24,7 +24,7 @@ const Post = () => {
   return (
     <div className='header'>
       <h3>Posts</h3>
-       <h2 >{renderFilteredDays()}</h2>
+       <p>{renderFilteredDays()}</p>
        <div className='post'>
       <div>
         <div>

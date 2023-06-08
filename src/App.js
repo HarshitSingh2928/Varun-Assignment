@@ -8,7 +8,7 @@ import store from './store';
 import CardDetails from "./components/CardDetails";
 
 function App() {
- 
+  // const cardData = useSelector((state) => state.posts.data);
   return (
     <Provider store={store}>
     <Router>
