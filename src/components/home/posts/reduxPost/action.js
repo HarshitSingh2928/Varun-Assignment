@@ -17,9 +17,9 @@ export const showData=(data)=>{
     payload:data
   }
 }
-export const fetchInitialData = () => {
+export const fetchUpdatedData = (data) => {
   return {
-    type: 'FETCH_INITIAL_DATA',
-    
+    type: 'FETCH_UPDATED_DATA',
+    payload:data
   };
 };

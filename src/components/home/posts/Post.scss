@@ -1,21 +1,24 @@
-.post{
-    h3{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    &>div{
-        display: flex;
-        justify-content: space-between;
-       
-    }
-   
-}
+
 .header{
     display: flex;
     flex-direction: column;
 
     align-items: center;
+    .post{
+
+        &>div{
+            display: flex;
+            justify-content: space-between;
+            &>div{
+                height: 70vh;
+                overflow: auto;
+                scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; 
+            }
+           
+        }
+       
+    }
     &>p{
         display: flex;
         font-size: large;
@@ -30,3 +33,6 @@
         border-radius: 2rem;
         color: white;
 }
+.header .post > div > div::-webkit-scrollbar {
+    display: none;
+  }

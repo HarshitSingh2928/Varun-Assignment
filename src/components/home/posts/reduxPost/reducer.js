@@ -64,10 +64,10 @@ const reducer = (state = initialState, action) => {
             ...state,
             filteredData: action.payload
           };
-          case 'FETCH_INITIAL_DATA':
+          case 'FETCH_UPDATED_DATA':
             return {
               ...state,
-              filteredData: [],
+              data: action.payload,
             };
       default:
         return state;

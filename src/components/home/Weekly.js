@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import './Weekly.css'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchData, fetchInitialData, showData } from './posts/reduxPost/action'
+import {  showData } from './posts/reduxPost/action'
 import { settask } from './reduxWeekly/action'
 
 
@@ -16,7 +16,7 @@ const Weekly = () => {
     
   useEffect(() => {
     dispatch(settask(cardData));
-    dispatch(fetchInitialData());
+    // dispatch(fetchInitialData());
   }, [cardData, dispatch]);
   const handleDayClick = (day) => {
     console.log(day);
@@ -43,7 +43,7 @@ const Weekly = () => {
       updatedCards = [...filteredData, ...filteredCards];
     }
     dispatch(showData(updatedCards));
-   console.log(updatedCards)
+  
   };
   
 

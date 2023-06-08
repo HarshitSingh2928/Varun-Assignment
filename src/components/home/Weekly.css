@@ -1,7 +1,12 @@
 .weekly {
   background-color: rgba(0, 128, 81, 0.7294117647);
   padding: 1rem;
-  height: 80vh;
+  height: -moz-min-content;
+  height: min-content;
+}
+.weekly h3 {
+  display: flex;
+  justify-content: center;
 }
 .weekly > div {
   display: flex;
