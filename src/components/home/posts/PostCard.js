@@ -6,18 +6,20 @@ import { showData } from './reduxPost/action';
 import { Link } from 'react-router-dom';
 const PostCard = () => {
   const dispatch = useDispatch();
+    const filteredCards = useSelector((state) => state.posts.filteredData);
     const cards = useSelector((state) => state.posts.data);
-  
-
     const handleDelete = (cardId,id) => {
       dispatch(delDay(cardId));
       const updatedCards = cards.filter((card) => card.id !== id);
       dispatch(showData(updatedCards))
     };
-  
+    const renderCards = filteredCards.length > 0 ? filteredCards : cards;
+
   return (
     <div className="postcard">
-    {cards.map((card) => (
+    {
+
+renderCards.map((card) => (
       <div key={card.id} className="card">
         <Link to={`/card/${card.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
           <h4>{card.text}</h4>

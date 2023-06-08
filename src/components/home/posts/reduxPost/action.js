@@ -17,3 +17,9 @@ export const showData=(data)=>{
     payload:data
   }
 }
+export const fetchInitialData = () => {
+  return {
+    type: 'FETCH_INITIAL_DATA',
+    
+  };
+};

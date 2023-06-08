@@ -42,7 +42,8 @@ const initialState={
       id: 23,
       posted_on: "Sun Nov 22 2020",
     },
-  ]
+  ],
+  filteredData: [],
 };
 const reducer = (state = initialState, action) => {
     switch (action.type) {
@@ -61,8 +62,13 @@ const reducer = (state = initialState, action) => {
         case 'SHOW_DATA':
           return{
             ...state,
-            data:action.payload
-          }
+            filteredData: action.payload
+          };
+          case 'FETCH_INITIAL_DATA':
+            return {
+              ...state,
+              filteredData: [],
+            };
       default:
         return state;
     }

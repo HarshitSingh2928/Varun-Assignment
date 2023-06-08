@@ -1,27 +1,49 @@
 import React, { useEffect, useState } from 'react'
 import './Weekly.css'
 import { useDispatch, useSelector } from 'react-redux'
-import { showData } from './posts/reduxPost/action'
+import { fetchData, fetchInitialData, showData } from './posts/reduxPost/action'
 import { settask } from './reduxWeekly/action'
 
 
 const Weekly = () => {
-  const [selectedDays, setSelectedDays] = useState([]);
+  
     const numDays=useSelector((state)=>state.daysreducer.days);
     const cardData =useSelector((state)=>state.posts.data)
+    const filteredData = useSelector((state) => state.posts.filteredData);
   const dispatch=useDispatch();
   
   
-     useEffect(()=>{
-        dispatch(settask(cardData));
-     },[]);
+    
+  useEffect(() => {
+    dispatch(settask(cardData));
+    dispatch(fetchInitialData());
+  }, [cardData, dispatch]);
   const handleDayClick = (day) => {
+    console.log(day);
     const filteredCards = cardData.filter((card) => {
       const cardDate = new Date(card.posted_on);
       const cardDay = cardDate.toLocaleDateString('en-US', { weekday: 'long' });
       return cardDay === day;
     });
-    dispatch(showData(filteredCards));
+
+    const isDaySelected = filteredData.some((card) => {
+      const cardDate = new Date(card.posted_on);
+      const cardDay = cardDate.toLocaleDateString('en-US', { weekday: 'long' });
+      return cardDay === day;
+    });
+    let updatedCards;
+
+    if (isDaySelected) {
+      updatedCards = filteredData.filter((card) => {
+        const cardDate = new Date(card.posted_on);
+        const cardDay = cardDate.toLocaleDateString('en-US', { weekday: 'long' });
+        return cardDay !== day;
+      });
+    } else {
+      updatedCards = [...filteredData, ...filteredCards];
+    }
+    dispatch(showData(updatedCards));
+   console.log(updatedCards)
   };
   
 
